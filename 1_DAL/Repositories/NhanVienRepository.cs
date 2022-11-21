@@ -20,7 +20,7 @@ namespace _1_DAL.Repositories
         {
             if (obj == null) return false;
             obj.Id = Guid.NewGuid();
-            _db.Add(obj);
+            _db.NhanViens.Add(obj);
             _db.SaveChanges();
             return true;
         }
@@ -29,7 +29,7 @@ namespace _1_DAL.Repositories
         {
             if (obj == null) return false;
             var temp = _db.NhanViens.FirstOrDefault(x => x.Id == obj.Id);
-            _db.Remove(obj);
+            _db.NhanViens.Remove(obj);
             _db.SaveChanges();
             return true;
         }
@@ -53,7 +53,7 @@ namespace _1_DAL.Repositories
             temp.TenDangNhap = obj.TenDangNhap;
             temp.MatKhau = obj.MatKhau;
             temp.TrangThai = obj.TrangThai;
-            _db.Update(obj);
+            _db.NhanViens.Update(obj);
             _db.SaveChanges();
             return true;
         }

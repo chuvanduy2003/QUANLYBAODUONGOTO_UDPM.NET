@@ -11,16 +11,18 @@ namespace _1_DAL.Repositories
     public class ChucVuRepository : IChucVuRepository
     {
         KOCDbContext _db;
+        private List<ChucVu> _chucVuList;
         public ChucVuRepository()
         {
             _db = new KOCDbContext();
+            _chucVuList = new List<ChucVu>();
         }
 
         public bool Add(ChucVu obj)
         {
             if (obj == null) return false;
             obj.Id = Guid.NewGuid();
-            _db.Add(obj);
+            _db.ChucVus.Add(obj);
             _db.SaveChanges();
             return true;
         }
@@ -29,7 +31,7 @@ namespace _1_DAL.Repositories
         {
             if (obj == null) return false;
             var temp = _db.ChucVus.FirstOrDefault(x => x.Id == obj.Id);
-            _db.Remove(temp);
+            _db.ChucVus.Remove(temp);
             _db.SaveChanges();
             return true;
         }
@@ -37,6 +39,9 @@ namespace _1_DAL.Repositories
         public List<ChucVu> GetAll()
         {
             return _db.ChucVus.ToList();
+
+            //_chucVuList = _db.ChucVus.ToList();
+            // return _chucVuList;
         }
 
         public bool Update(ChucVu obj)
@@ -45,7 +50,7 @@ namespace _1_DAL.Repositories
             var temp = _db.ChucVus.FirstOrDefault(x => x.Id == obj.Id);
             temp.Ma = obj.Ma;
             temp.Ten = obj.Ten;
-            _db.Update(temp);
+            _db.ChucVus.Update(temp);
             _db.SaveChanges();
             return true;
         }

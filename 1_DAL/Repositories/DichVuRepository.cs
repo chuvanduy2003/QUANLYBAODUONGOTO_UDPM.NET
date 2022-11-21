@@ -20,7 +20,7 @@ namespace _1_DAL.Repositories
         {
             if (obj == null) return false;
             obj.Id = Guid.NewGuid();
-            _db.Add(obj);
+            _db.DichVus.Add(obj);
             _db.SaveChanges();
             return true;
         }
@@ -29,7 +29,7 @@ namespace _1_DAL.Repositories
         {
             if (obj == null) return false;
             var temp = _db.DichVus.FirstOrDefault(x => x.Id == obj.Id);
-            _db.Remove(obj);
+            _db.DichVus.Remove(obj);
             _db.SaveChanges();
             return true;
         }
@@ -48,7 +48,7 @@ namespace _1_DAL.Repositories
             temp.Ten = obj.Ten;
             temp.Gia = obj.Gia;
             temp.ThoiGianHT = obj.ThoiGianHT;
-            _db.Update(temp);
+            _db.DichVus.Update(temp);
             _db.SaveChanges();
             return true;
         }
