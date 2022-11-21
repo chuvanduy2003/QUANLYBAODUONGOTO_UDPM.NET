@@ -21,7 +21,7 @@ namespace _1_DAL.Repositories
         public bool Add(ChucVu obj)
         {
             if (obj == null) return false;
-            obj.Id = Guid.NewGuid();
+            //obj.Id = Guid.NewGuid();
             _db.ChucVus.Add(obj);
             _db.SaveChanges();
             return true;
@@ -38,10 +38,10 @@ namespace _1_DAL.Repositories
 
         public List<ChucVu> GetAll()
         {
-            return _db.ChucVus.ToList();
+            //return _db.ChucVus.ToList();
 
-            //_chucVuList = _db.ChucVus.ToList();
-            // return _chucVuList;
+            _chucVuList = _db.ChucVus.ToList();
+            return _chucVuList;
         }
 
         public bool Update(ChucVu obj)

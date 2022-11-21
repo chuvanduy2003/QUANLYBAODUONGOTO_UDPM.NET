@@ -20,6 +20,7 @@ namespace _3_PL.Views
         {
             InitializeComponent();
             _chucVuServices = new ChucVuServices();
+            LoadData();
         }
         private void LoadData()
         {
