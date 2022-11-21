@@ -19,7 +19,7 @@ namespace _1_DAL.Repositories
         public bool Add(NhanVien obj)
         {
             if (obj == null) return false;
-            obj.Id = Guid.NewGuid();
+            //obj.Id = Guid.NewGuid();
             _db.NhanViens.Add(obj);
             _db.SaveChanges();
             return true;
