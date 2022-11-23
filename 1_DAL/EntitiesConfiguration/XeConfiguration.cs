@@ -16,7 +16,6 @@ namespace _1_DAL.EntitiesConfiguration
             builder.HasOne<KhachHang>(x => x.KhachHang)
                    .WithMany(x => x.Xes)
                    .HasForeignKey(x => x.IdKH);
-            builder.Property(x => x.Id);
             builder.Property(x => x.BienSo).HasMaxLength(10).IsRequired();
             builder.Property(x => x.TrangThai).HasDefaultValue(0);
         }
