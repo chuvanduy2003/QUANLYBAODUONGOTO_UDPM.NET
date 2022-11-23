@@ -8,7 +8,7 @@ namespace _1_DAL.EF
 {
     public class KOCDbContextFactory : IDesignTimeDbContextFactory<KOCDbContext>
     {
-        private readonly string _connectionString = @"Data Source=LAPTOP-M1K92CSH\SQLEXPRESS;Initial Catalog=KOC_BMW;Integrated Security=True";
+        private readonly string _connectionString = @"Data Source=DESKTOP-3730FF9\SQLEXPRESS;Initial Catalog=KOC_BMW;Integrated Security=True";
         public KOCDbContext CreateDbContext(string[] args)
         {
             var optionsBuilder = new DbContextOptionsBuilder<KOCDbContext>();

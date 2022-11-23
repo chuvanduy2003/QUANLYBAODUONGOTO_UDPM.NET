@@ -16,7 +16,6 @@ namespace _1_DAL.EntitiesConfiguration
             builder.HasOne<ChucVu>(x => x.ChucVu)
                    .WithMany(x => x.NhanViens)
                    .HasForeignKey(x => x.IdCV);
-            builder.Property(x => x.Id);
             builder.Property(x => x.Ma).HasMaxLength(10).IsRequired();
             builder.Property(x => x.Ten).HasMaxLength(50).IsRequired()
                    .IsUnicode();

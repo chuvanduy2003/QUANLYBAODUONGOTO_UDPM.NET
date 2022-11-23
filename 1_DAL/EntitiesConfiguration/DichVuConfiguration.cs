@@ -16,7 +16,6 @@ namespace _1_DAL.EntitiesConfiguration
             builder.HasOne<LoaiDichVu>(x => x.LoaiDichVu)
                    .WithMany(x => x.DichVus)
                    .HasForeignKey(x => x.IdLDV);
-            builder.Property(x => x.Id);
             builder.Property(x => x.Ma).IsRequired().HasMaxLength(10);
             builder.Property(x => x.Ten).IsRequired().HasMaxLength(200)
                    .IsUnicode();
