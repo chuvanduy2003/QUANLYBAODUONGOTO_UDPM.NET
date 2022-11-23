@@ -16,6 +16,8 @@ namespace _1_DAL.EntitiesConfiguration
             builder.Property(x => x.Ma).HasMaxLength(10).IsRequired();
             builder.Property(x => x.Ten).HasMaxLength(50).IsRequired()
                    .IsUnicode();
+            builder.Property(x => x.KhungGio).HasMaxLength(50).IsRequired()
+                  .IsUnicode();
             builder.Property(x => x.Ho).HasMaxLength(50).IsRequired()
                    .IsUnicode();
             builder.Property(x => x.TenDem).HasMaxLength(50).IsRequired()

@@ -14,6 +14,7 @@ namespace _1_DAL.Entities
         public string SDT { get; set; }
         public string DiaChi { get; set; }
         public string ThanhPho { get; set; }
+        public string KhungGio { get; set; }
         public int TrangThai { get; set; }
         public ICollection<Xe> Xes { get; set; }
     }
