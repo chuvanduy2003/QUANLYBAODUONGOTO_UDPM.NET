@@ -13,7 +13,7 @@ namespace _1_DAL.EntitiesConfiguration
         {
             builder.ToTable("LoaiDichVu");
             builder.HasKey(x => x.Id);
-            builder.Property(x => x.Id).HasDefaultValueSql("NEWID()");
+            builder.Property(x => x.Id);
             builder.Property(x => x.Ma).IsRequired().HasMaxLength(10).IsRequired();
             builder.Property(x => x.Ten).IsRequired().HasMaxLength(200).IsRequired();
             builder.Property(x => x.TrangThai).HasDefaultValue(0);

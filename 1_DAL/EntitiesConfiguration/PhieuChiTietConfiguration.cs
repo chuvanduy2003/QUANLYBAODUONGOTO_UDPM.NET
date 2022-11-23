@@ -12,7 +12,7 @@ namespace _1_DAL.EntitiesConfiguration
         public void Configure(EntityTypeBuilder<PhieuChiTiet> builder)
         {
             builder.ToTable("PhieuChiTiet").HasKey(x => x.Id);
-            builder.Property(x => x.Id).HasDefaultValueSql("NEWID()");
+            builder.Property(x => x.Id);
             builder.HasOne<PhieuDichVu>(x => x.PhieuDichVu)
                    .WithMany(x => x.PhieuChiTiets)
                    .HasForeignKey(x => x.IdPhieu);
