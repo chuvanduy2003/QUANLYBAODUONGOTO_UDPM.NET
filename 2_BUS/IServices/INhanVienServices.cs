@@ -11,5 +11,6 @@ namespace _2_BUS.IServices
         string Update(NhanVienViews obj);
         string Delete(NhanVienViews obj);
         List<NhanVienViews> GetAll();
+        List<NhanVienViews> GetAll(string a);
     }
 }

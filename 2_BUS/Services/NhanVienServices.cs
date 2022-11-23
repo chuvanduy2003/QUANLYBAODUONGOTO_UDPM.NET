@@ -35,6 +35,7 @@ namespace _2_BUS.Services
                 DiaChi = obj.DiaChi,
                 ThanhPho = obj.ThanhPho,
                 TrangThai = obj.TrangThai,
+                
             };
             if (_inhanvienrepository.Add(a)) return "Thành công";
             return "Thất bại";
@@ -56,6 +57,8 @@ namespace _2_BUS.Services
                 DiaChi = obj.DiaChi,
                 ThanhPho = obj.ThanhPho,
                 TrangThai = obj.TrangThai,
+                SDT = obj.SDT,
+                
             };
             if (_inhanvienrepository.Delete(a)) return "Thành công";
             return "Thất bại";
@@ -80,11 +83,19 @@ namespace _2_BUS.Services
                        DiaChi = a.DiaChi,
                        ThanhPho = a.ThanhPho,
                        SDT = a.SDT,
-                       TrangThai = a.TrangThai
+                       TrangThai = a.TrangThai,
+                       
                    }).ToList();
             return lst;
         }
-
+        public List<NhanVienViews> GetAll(string a)
+        {
+            if (a == null)
+            {
+                return GetAll();
+            }
+            return GetAll().Where(c => c.Ma.Contains(a)).ToList();
+        }
         public string Update(NhanVienViews obj)
         {
             if (obj == null) return "Thất bại";
@@ -101,6 +112,8 @@ namespace _2_BUS.Services
                 DiaChi = obj.DiaChi,
                 ThanhPho = obj.ThanhPho,
                 TrangThai = obj.TrangThai,
+                SDT = obj.SDT,
+                
             };
             if (_inhanvienrepository.Update(a)) return "Thành công";
             return "Thất bại";

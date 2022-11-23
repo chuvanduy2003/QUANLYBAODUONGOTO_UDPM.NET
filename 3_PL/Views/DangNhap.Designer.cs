@@ -34,6 +34,7 @@
             this.txt_taikhoan = new System.Windows.Forms.TextBox();
             this.txt_matkhau = new System.Windows.Forms.TextBox();
             this.btn_dangnhap = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -87,12 +88,23 @@
             this.btn_dangnhap.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btn_dangnhap.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btn_dangnhap.ForeColor = System.Drawing.Color.Red;
-            this.btn_dangnhap.Location = new System.Drawing.Point(413, 283);
+            this.btn_dangnhap.Location = new System.Drawing.Point(363, 275);
             this.btn_dangnhap.Name = "btn_dangnhap";
             this.btn_dangnhap.Size = new System.Drawing.Size(186, 55);
             this.btn_dangnhap.TabIndex = 6;
             this.btn_dangnhap.Text = "Đăng nhập";
             this.btn_dangnhap.UseVisualStyleBackColor = false;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Italic | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point);
+            this.label2.ForeColor = System.Drawing.Color.Red;
+            this.label2.Location = new System.Drawing.Point(178, 302);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(62, 28);
+            this.label2.TabIndex = 7;
+            this.label2.Text = "Thoát";
             // 
             // DangNhap
             // 
@@ -100,6 +112,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.ClientSize = new System.Drawing.Size(665, 392);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.btn_dangnhap);
             this.Controls.Add(this.txt_matkhau);
             this.Controls.Add(this.txt_taikhoan);
@@ -121,5 +134,6 @@
         private System.Windows.Forms.TextBox txt_taikhoan;
         private System.Windows.Forms.TextBox txt_matkhau;
         private System.Windows.Forms.Button btn_dangnhap;
+        private System.Windows.Forms.Label label2;
     }
 }

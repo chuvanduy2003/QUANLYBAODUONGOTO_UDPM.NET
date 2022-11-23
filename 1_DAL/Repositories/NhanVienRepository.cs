@@ -36,7 +36,7 @@ namespace _1_DAL.Repositories
 
         public List<NhanVien> GetAll()
         {
-            throw new NotImplementedException();
+            return _db.NhanViens.ToList();
         }
 
         public bool Update(NhanVien obj)
@@ -52,6 +52,7 @@ namespace _1_DAL.Repositories
             temp.ThanhPho = obj.ThanhPho;
             temp.TenDangNhap = obj.TenDangNhap;
             temp.MatKhau = obj.MatKhau;
+            temp.ChucVu = obj.ChucVu;
             temp.TrangThai = obj.TrangThai;
             _db.NhanViens.Update(obj);
             _db.SaveChanges();
