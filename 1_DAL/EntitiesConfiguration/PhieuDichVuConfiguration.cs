@@ -13,7 +13,7 @@ namespace _1_DAL.EntitiesConfiguration
         {
             builder.ToTable("PhieuDichVu");
             builder.HasKey(x => x.Id);
-            builder.Property(x => x.Id).HasDefaultValueSql("NEWID()");
+            builder.Property(x => x.Id);
             builder.HasOne<Xe>(x => x.Xe)
                    .WithMany(x => x.PhieuDichVus)
                    .HasForeignKey(x => x.IdXe);
