@@ -10,8 +10,8 @@ using _1_DAL.EF;
 namespace _1_DAL.Migrations
 {
     [DbContext(typeof(KOCDbContext))]
-    [Migration("20221117072000_KOC_BMW")]
-    partial class KOC_BMW
+    [Migration("20221123172430_DucAnh")]
+    partial class DucAnh
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -25,8 +25,7 @@ namespace _1_DAL.Migrations
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier")
-                        .HasDefaultValueSql("NEWID()");
+                        .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("Ma")
                         .IsRequired()
@@ -48,8 +47,7 @@ namespace _1_DAL.Migrations
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier")
-                        .HasDefaultValueSql("NEWID()");
+                        .HasColumnType("uniqueidentifier");
 
                     b.Property<float>("Gia")
                         .HasColumnType("real");
@@ -91,8 +89,7 @@ namespace _1_DAL.Migrations
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier")
-                        .HasDefaultValueSql("NEWID()");
+                        .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("DiaChi")
                         .IsRequired()
@@ -148,8 +145,7 @@ namespace _1_DAL.Migrations
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier")
-                        .HasDefaultValueSql("NEWID()");
+                        .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("Ma")
                         .IsRequired()
@@ -175,8 +171,7 @@ namespace _1_DAL.Migrations
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier")
-                        .HasDefaultValueSql("NEWID()");
+                        .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("DiaChi")
                         .IsRequired()
@@ -243,8 +238,7 @@ namespace _1_DAL.Migrations
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier")
-                        .HasDefaultValueSql("NEWID()");
+                        .HasColumnType("uniqueidentifier");
 
                     b.Property<float>("DonGia")
                         .HasColumnType("real");
@@ -280,8 +274,7 @@ namespace _1_DAL.Migrations
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier")
-                        .HasDefaultValueSql("NEWID()");
+                        .HasColumnType("uniqueidentifier");
 
                     b.Property<Guid>("IdNVSua")
                         .HasColumnType("uniqueidentifier");
@@ -346,8 +339,7 @@ namespace _1_DAL.Migrations
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier")
-                        .HasDefaultValueSql("NEWID()");
+                        .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("BienSo")
                         .IsRequired()
