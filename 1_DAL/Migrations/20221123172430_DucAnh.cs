@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace _1_DAL.Migrations
 {
-    public partial class KOC_BMW : Migration
+    public partial class DucAnh : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -11,7 +11,7 @@ namespace _1_DAL.Migrations
                 name: "ChucVu",
                 columns: table => new
                 {
-                    Id = table.Column<Guid>(nullable: false, defaultValueSql: "NEWID()"),
+                    Id = table.Column<Guid>(nullable: false),
                     Ma = table.Column<string>(maxLength: 10, nullable: false),
                     Ten = table.Column<string>(maxLength: 50, nullable: false)
                 },
@@ -24,7 +24,7 @@ namespace _1_DAL.Migrations
                 name: "KhachHang",
                 columns: table => new
                 {
-                    Id = table.Column<Guid>(nullable: false, defaultValueSql: "NEWID()"),
+                    Id = table.Column<Guid>(nullable: false),
                     Ma = table.Column<string>(maxLength: 10, nullable: false),
                     Ho = table.Column<string>(maxLength: 50, nullable: false),
                     TenDem = table.Column<string>(maxLength: 50, nullable: false),
@@ -43,7 +43,7 @@ namespace _1_DAL.Migrations
                 name: "LoaiDichVu",
                 columns: table => new
                 {
-                    Id = table.Column<Guid>(nullable: false, defaultValueSql: "NEWID()"),
+                    Id = table.Column<Guid>(nullable: false),
                     Ma = table.Column<string>(maxLength: 10, nullable: false),
                     Ten = table.Column<string>(maxLength: 200, nullable: false),
                     TrangThai = table.Column<int>(nullable: false, defaultValue: 0)
@@ -57,7 +57,7 @@ namespace _1_DAL.Migrations
                 name: "NhanVien",
                 columns: table => new
                 {
-                    Id = table.Column<Guid>(nullable: false, defaultValueSql: "NEWID()"),
+                    Id = table.Column<Guid>(nullable: false),
                     IdCV = table.Column<Guid>(nullable: false),
                     Ma = table.Column<string>(maxLength: 10, nullable: false),
                     Ho = table.Column<string>(maxLength: 50, nullable: false),
@@ -85,7 +85,7 @@ namespace _1_DAL.Migrations
                 name: "Xe",
                 columns: table => new
                 {
-                    Id = table.Column<Guid>(nullable: false, defaultValueSql: "NEWID()"),
+                    Id = table.Column<Guid>(nullable: false),
                     IdKH = table.Column<Guid>(nullable: false),
                     Ma = table.Column<string>(nullable: true),
                     BienSo = table.Column<string>(maxLength: 10, nullable: false),
@@ -106,7 +106,7 @@ namespace _1_DAL.Migrations
                 name: "DichVu",
                 columns: table => new
                 {
-                    Id = table.Column<Guid>(nullable: false, defaultValueSql: "NEWID()"),
+                    Id = table.Column<Guid>(nullable: false),
                     IdLDV = table.Column<Guid>(nullable: false),
                     Ma = table.Column<string>(maxLength: 10, nullable: false),
                     Ten = table.Column<string>(maxLength: 200, nullable: false),
@@ -131,7 +131,7 @@ namespace _1_DAL.Migrations
                 name: "PhieuDichVu",
                 columns: table => new
                 {
-                    Id = table.Column<Guid>(nullable: false, defaultValueSql: "NEWID()"),
+                    Id = table.Column<Guid>(nullable: false),
                     IdXe = table.Column<Guid>(nullable: false),
                     IdNVTaoPhieu = table.Column<Guid>(nullable: false),
                     Ma = table.Column<string>(maxLength: 10, nullable: false),
@@ -168,7 +168,7 @@ namespace _1_DAL.Migrations
                 name: "PhieuChiTiet",
                 columns: table => new
                 {
-                    Id = table.Column<Guid>(nullable: false, defaultValueSql: "NEWID()"),
+                    Id = table.Column<Guid>(nullable: false),
                     IdPhieu = table.Column<Guid>(nullable: false),
                     IdDichVu = table.Column<Guid>(nullable: false),
                     SoLuong = table.Column<int>(nullable: false),
