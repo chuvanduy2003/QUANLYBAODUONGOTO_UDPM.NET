@@ -28,8 +28,8 @@ namespace _1_DAL.Repositories
         public bool Delete(KhachHang obj)
         {
             if (obj == null) return false;
-            var temp = _db.DichVus.FirstOrDefault(x => x.Id == obj.Id);
-            _db.KhachHangs.Remove(obj);
+            var temp = _db.KhachHangs.FirstOrDefault(x => x.Id == obj.Id);
+            _db.KhachHangs.Remove(temp);
             _db.SaveChanges();
             return true;
         }
@@ -51,7 +51,7 @@ namespace _1_DAL.Repositories
             temp.DiaChi = obj.DiaChi;
             temp.ThanhPho = obj.ThanhPho;
             temp.TrangThai = obj.TrangThai;
-            _db.KhachHangs.Update(obj);
+            _db.KhachHangs.Update(temp);
             _db.SaveChanges();
             return true;
         }

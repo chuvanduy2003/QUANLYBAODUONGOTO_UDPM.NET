@@ -60,14 +60,11 @@ namespace _2_BUS.Services
                    {
                        Id = a.Id,
                        Ma = a.Ma,
-                       IdKH = b.Id,
-                       TenKH = b.Ten,
+                       IdKH = a.IdKH,
+                       TenKH = b.Ho+" "+b.TenDem+" "+b.Ten,
                        BienSo = a.BienSo,
                        TrangThai = a.TrangThai,
-                       //DiaChiKH=b.DiaChi,
-                       //SDT=b.SDT,
-                       //TrangThaiKH=b.TrangThai,
-                       //KhungGio=b.KhungGio,
+                       
                    }).ToList();
             return lst;
         }
@@ -86,6 +83,12 @@ namespace _2_BUS.Services
             };
             if (_ixerepository.Update(a)) return "Thành công";
             return "Thất bại";
+        }
+        public List<XeViews> GetAll(string input)
+        {
+            if (input == null) return GetAll();
+            var x = GetAll().Where(c => c.BienSo.Contains(input)).ToList();
+            return x;
         }
     }
 }

@@ -26,9 +26,12 @@ namespace _2_BUS.Services
             {
                 Id = Guid.NewGuid(),
                 Ma = obj.Ma,
+                Ho=obj.Ho,
                 Ten = obj.Ten,
+                TenDem=obj.Tendem,
                 SDT = obj.SDT,
                 DiaChi = obj.DiaChi,
+                ThanhPho=obj.ThanhPho,
                 KhungGio=obj.KhungGio,
                 TrangThai = obj.TrangThai,
             };
@@ -43,7 +46,7 @@ namespace _2_BUS.Services
 
         public string Delete(KhachHangViews obj)
         {
-            if (obj == null) ; return "Thất bại";
+            if (obj == null)  return "Thất bại";
             var a = new KhachHang()
             {
                 Id = obj.Id,
@@ -67,30 +70,52 @@ namespace _2_BUS.Services
                    {
                        Id = a.Id,
                        Ma = a.Ma,
+                       Ho=a.Ho,
+                       Tendem=a.TenDem,
                        Ten = a.Ten,
                        SDT = a.SDT,
                        DiaChi = a.DiaChi,
+                       ThanhPho=a.ThanhPho,
                        KhungGio=a.KhungGio,
                        TrangThai = a.TrangThai,
+                       HoTen=a.Ho+" "+ a.TenDem +" "+a.Ten,
+                       Diachi=a.DiaChi+ " "+ a.ThanhPho,
                    }).ToList();
             return lst;
         }
 
         public string Update(KhachHangViews obj)
         {
-            if (obj == null) ; return "Thất bại";
+            if (obj == null)  return "Thất bại";
             var a = new KhachHang()
             {
                 Id = obj.Id,
                 Ma = obj.Ma,
+                Ho=obj.Ho,
+                TenDem=obj.Tendem,
                 Ten = obj.Ten,
                 SDT = obj.SDT,
                 DiaChi = obj.DiaChi,
+                ThanhPho=obj.ThanhPho,
                 KhungGio=obj.KhungGio,
                 TrangThai = obj.TrangThai,
             };
             if (_ikhachhangrepository.Update(a)) return "Thành Công";
             return "Thất bại";
+        }
+        public List<KhachHangViews> GetAll(string input)
+        {
+            
+            
+            if (input == null)
+            {
+                return GetAll();
+            }
+            //List<KhachHangViews> x = new List<KhachHangViews>();
+              var  x=GetAll().Where(c=>c.SDT.Contains(input)).ToList();
+
+            return x;
+            
         }
     }
 }
