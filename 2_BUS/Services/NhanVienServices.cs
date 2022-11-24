@@ -59,6 +59,7 @@ namespace _2_BUS.Services
                 TrangThai = obj.TrangThai,
                 SDT = obj.SDT,
                 
+                
             };
             if (_inhanvienrepository.Delete(a)) return "Thành công";
             return "Thất bại";

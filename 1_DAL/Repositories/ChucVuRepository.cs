@@ -38,8 +38,6 @@ namespace _1_DAL.Repositories
 
         public List<ChucVu> GetAll()
         {
-            //return _db.ChucVus.ToList();
-
             _chucVuList = _db.ChucVus.ToList();
             return _chucVuList;
         }
@@ -47,7 +45,7 @@ namespace _1_DAL.Repositories
         public bool Update(ChucVu obj)
         {
             if (obj == null) return false;
-            var temp = _db.ChucVus.FirstOrDefault(x => x.Id == obj.Id);
+            var temp = _db.ChucVus.FirstOrDefault(c => c.Id == obj.Id);
             temp.Ma = obj.Ma;
             temp.Ten = obj.Ten;
             _db.ChucVus.Update(temp);

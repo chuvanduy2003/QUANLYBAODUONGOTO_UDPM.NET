@@ -52,7 +52,7 @@ namespace _1_DAL.Repositories
             temp.ThanhPho = obj.ThanhPho;
             temp.TenDangNhap = obj.TenDangNhap;
             temp.MatKhau = obj.MatKhau;
-            temp.ChucVu = obj.ChucVu;
+            temp.IdCV = obj.IdCV;
             temp.TrangThai = obj.TrangThai;
             _db.NhanViens.Update(temp);
             _db.SaveChanges();

@@ -17,7 +17,7 @@ namespace _3_PL.Views
         INhanVienServices _nhanVienServices;
         IChucVuServices _chucVuServices;
         private Guid _id;
-        private List<Guid> lstidcv;
+        
         public NhanVien()
         {
             InitializeComponent();
@@ -31,7 +31,7 @@ namespace _3_PL.Views
             foreach (var item in _chucVuServices.GetAll())
             {
                 cbb_chucvu.Items.Add(item.Ten);
-                //lstidcv.Add(item.Id);
+                
             }
         }
         private void LoadData()
@@ -40,6 +40,7 @@ namespace _3_PL.Views
             dtg_hienthi.ColumnCount = 11;
             dtg_hienthi.Columns[0].Name = "STT";
             dtg_hienthi.Columns[1].Name = "ID";
+            dtg_hienthi.Columns[1].Visible = false;
             dtg_hienthi.Columns[2].Name = "MÃ";
             dtg_hienthi.Columns[3].Name = "HỌ VÀ TÊN";
             dtg_hienthi.Columns[4].Name = "SĐT";
@@ -61,6 +62,7 @@ namespace _3_PL.Views
             dtg_hienthi.ColumnCount = 11;
             dtg_hienthi.Columns[0].Name = "STT";
             dtg_hienthi.Columns[1].Name = "ID";
+            dtg_hienthi.Columns[1].Visible = false;
             dtg_hienthi.Columns[2].Name = "MÃ";
             dtg_hienthi.Columns[3].Name = "HỌ VÀ TÊN";
             dtg_hienthi.Columns[4].Name = "SĐT";
@@ -81,7 +83,7 @@ namespace _3_PL.Views
             NhanVienViews nv = new NhanVienViews()
             {
                 Id = Guid.Empty,
-                IdCV = _chucVuServices.GetAll().Where(c => c.Ten == Convert.ToString(cbb_chucvu.Text)).Select(c => c.Id).FirstOrDefault(),
+                IdCV = _chucVuServices.GetAll().FirstOrDefault(c=>c.Ten== cbb_chucvu.Text).Id,
                 Ma = txt_manhanvien.Text,
                 Ho = txt_ho.Text,
                 TenDem = txt_tendem.Text,
