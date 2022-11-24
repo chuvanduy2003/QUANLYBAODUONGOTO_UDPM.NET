@@ -19,7 +19,7 @@ namespace _1_DAL.Repositories
         public bool Add(NhanVien obj)
         {
             if (obj == null) return false;
-            //obj.Id = Guid.NewGuid();
+            obj.Id = Guid.NewGuid();
             _db.NhanViens.Add(obj);
             _db.SaveChanges();
             return true;
@@ -29,7 +29,7 @@ namespace _1_DAL.Repositories
         {
             if (obj == null) return false;
             var temp = _db.NhanViens.FirstOrDefault(x => x.Id == obj.Id);
-            _db.NhanViens.Remove(obj);
+            _db.NhanViens.Remove(temp);
             _db.SaveChanges();
             return true;
         }
@@ -54,7 +54,7 @@ namespace _1_DAL.Repositories
             temp.MatKhau = obj.MatKhau;
             temp.ChucVu = obj.ChucVu;
             temp.TrangThai = obj.TrangThai;
-            _db.NhanViens.Update(obj);
+            _db.NhanViens.Update(temp);
             _db.SaveChanges();
             return true;
         }

@@ -24,7 +24,7 @@ namespace _1_DAL.EF
             {
 
 
-                optionsBuilder.UseSqlServer(@"Data Source=DESKTOP-3730FF9\SQLEXPRESS;Initial Catalog=KOC_BMW;Integrated Security=True");
+                optionsBuilder.UseSqlServer(@"Data Source=LAPTOP-M1K92CSH\SQLEXPRESS;Initial Catalog=KOC_BMW;Integrated Security=True");
 
             }
 
