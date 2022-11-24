@@ -11,6 +11,7 @@ namespace _1_DAL.Repositories
     public class DichVuRepository : IDichVuRepository
     {
         KOCDbContext _db;
+       
         public DichVuRepository()
         {
             _db = new KOCDbContext();
@@ -19,7 +20,7 @@ namespace _1_DAL.Repositories
         public bool Add(DichVu obj)
         {
             if (obj == null) return false;
-            //obj.Id = Guid.NewGuid();
+            obj.Id = Guid.NewGuid();
             _db.DichVus.Add(obj);
             _db.SaveChanges();
             return true;
@@ -29,7 +30,7 @@ namespace _1_DAL.Repositories
         {
             if (obj == null) return false;
             var temp = _db.DichVus.FirstOrDefault(x => x.Id == obj.Id);
-            _db.DichVus.Remove(obj);
+            _db.DichVus.Remove(temp);
             _db.SaveChanges();
             return true;
         }
