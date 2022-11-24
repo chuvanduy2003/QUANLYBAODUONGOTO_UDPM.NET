@@ -38,6 +38,7 @@
             this.btn_sua = new System.Windows.Forms.Button();
             this.btn_xoa = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dtg_hienthi)).BeginInit();
+            
             this.SuspendLayout();
             // 
             // label1
@@ -124,12 +125,17 @@
             this.btn_xoa.UseVisualStyleBackColor = true;
             this.btn_xoa.Click += new System.EventHandler(this.btn_xoa_Click);
             // 
+            // pictureBox1
+            // 
+            
+            // 
             // ChucVu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.ClientSize = new System.Drawing.Size(539, 429);
+            
             this.Controls.Add(this.btn_xoa);
             this.Controls.Add(this.btn_sua);
             this.Controls.Add(this.btn_them);
@@ -142,6 +148,7 @@
             this.Name = "ChucVu";
             this.Text = "Chức Vụ";
             ((System.ComponentModel.ISupportInitialize)(this.dtg_hienthi)).EndInit();
+            
             this.ResumeLayout(false);
             this.PerformLayout();
 

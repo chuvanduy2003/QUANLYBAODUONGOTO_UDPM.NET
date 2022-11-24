@@ -35,7 +35,7 @@ namespace _2_BUS.Services
                 DiaChi = obj.DiaChi,
                 ThanhPho = obj.ThanhPho,
                 TrangThai = obj.TrangThai,
-                
+                SDT = obj.SDT,
             };
             if (_inhanvienrepository.Add(a)) return "Thành công";
             return "Thất bại";
@@ -58,6 +58,7 @@ namespace _2_BUS.Services
                 ThanhPho = obj.ThanhPho,
                 TrangThai = obj.TrangThai,
                 SDT = obj.SDT,
+                
                 
             };
             if (_inhanvienrepository.Delete(a)) return "Thành công";

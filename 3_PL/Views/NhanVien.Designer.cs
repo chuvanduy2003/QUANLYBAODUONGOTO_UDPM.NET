@@ -212,6 +212,7 @@
             this.dtg_hienthi.RowTemplate.Height = 29;
             this.dtg_hienthi.Size = new System.Drawing.Size(915, 157);
             this.dtg_hienthi.TabIndex = 15;
+            this.dtg_hienthi.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtg_hienthi_CellClick);
             // 
             // label12
             // 
