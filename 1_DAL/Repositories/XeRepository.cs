@@ -40,7 +40,7 @@ namespace _1_DAL.Repositories
 
         public bool Update(Xe obj)
         {
-            if (obj == null) return false;
+            if (obj == null)   return false;
             var temp = _db.Xes.FirstOrDefault(c => c.Id == obj.Id);
             temp.Id = obj.Id;
             temp.IdKH = obj.IdKH;

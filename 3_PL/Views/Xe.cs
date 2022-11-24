@@ -24,7 +24,7 @@ namespace _3_PL.Views
             _ixeservices=new XeServices();
             _ikhservices = new KhachHangServices();
             LoadKH();
-            LoadData(null);
+            LoadData(null)   ;
         }
         public void LoadKH()
         {

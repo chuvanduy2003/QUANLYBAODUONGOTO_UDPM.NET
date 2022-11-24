@@ -27,7 +27,7 @@ namespace _3_PL.Views
         public void LoadKhungGio()
         {
             cmb_gio.Items.Clear();
-            cmb_gio.Items.Add("Chọn khung giờ");
+            cmb_gio.Items.Add("Chọn khung giờ") ;
             cmb_gio.Items.Add("7h30-8h30");
             cmb_gio.Items.Add("8h50-9h50");
             cmb_gio.Items.Add("10h00-11h00");

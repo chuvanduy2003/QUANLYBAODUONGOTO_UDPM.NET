@@ -11,6 +11,6 @@ namespace _2_BUS.IServices
         string Update(KhachHangViews obj);
         string Delete(KhachHangViews obj);
         List<KhachHangViews> GetAll();
-        List<KhachHangViews> GetAll(string input);
+        List<KhachHangViews> GetAll(string input)   ;
     }
 }

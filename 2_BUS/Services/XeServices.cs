@@ -35,7 +35,7 @@ namespace _2_BUS.Services
             return "Thất bại";
         }
 
-        public string Delete(XeViews obj)
+        public string Delete(XeViews obj )
         {
             if (obj == null) return "Thất bại";
             var a = new Xe()

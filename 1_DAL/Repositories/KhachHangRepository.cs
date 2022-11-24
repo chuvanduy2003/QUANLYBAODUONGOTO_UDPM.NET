@@ -22,7 +22,7 @@ namespace _1_DAL.Repositories
             //obj.Id = Guid.NewGuid();
             _db.KhachHangs.Add(obj);
             _db.SaveChanges();
-            return true;
+            return true  ;
         }
 
         public bool Delete(KhachHang obj)

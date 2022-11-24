@@ -107,7 +107,7 @@ namespace _2_BUS.Services
         {
             
             
-            if (input == null)
+            if (input == null  )
             {
                 return GetAll();
             }

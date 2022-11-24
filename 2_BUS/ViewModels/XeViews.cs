@@ -11,7 +11,7 @@ namespace _2_BUS.ViewModels
         public string Ma { get; set; }
         public string BienSo { get; set; }
         public int TrangThai { get; set; }
-        public string TenKH { get; set; }
+        public string TenKH { get; set;  }
         
 
     }
